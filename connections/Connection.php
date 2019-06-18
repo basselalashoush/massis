@@ -22,9 +22,7 @@ class Connection {
 
     public function __construct() {
         try {
-            /*$connect = 'mysql:dbname='.self::$db_name.';'.self::$server.';'.'charset=utf8';
-            self::$pdo = new PDO($connect, self::$user, self::$pwd,array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET lc_time_names = \'fr_FR\''));
-            self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);*/
+            
              $connect = 'mysql:dbname='.self::$db_name.';'.self::$server;
             self::$pdo = new PDO($connect, self::$user, self::$pwd,array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
             self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
